@@ -122,9 +122,9 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="sticky top-4 z-40 mx-4 sm:mx-6 lg:mx-8"
+      className="sticky top-4 z-40 px-4 sm:px-6 lg:px-8"
     >
-      <div className="backdrop-blur-xl bg-white/5 border border-white/15 rounded-2xl shadow-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] px-4 sm:px-6 py-3 transition-all duration-300 hover:border-violet-500/20">
+      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/15 rounded-2xl shadow-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] px-4 sm:px-6 py-3 transition-all duration-300 hover:border-violet-500/20">
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group flex-shrink-0" title="Vote + Tales">
@@ -210,13 +210,13 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
             {/* Mobile Search Button */}
             <Button
               variant="ghost"
               size="sm"
               onClick={() => navigate('/search')}
-              className="md:hidden"
+              className="md:hidden flex-shrink-0"
             >
               <Search className="w-4 h-4" />
             </Button>
@@ -227,6 +227,7 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
                 size="sm"
                 onClick={onStartStory}
                 leftIcon={<PenLine className="w-4 h-4" />}
+                className="flex-shrink-0"
               >
                 <span className="hidden sm:inline">Start Story</span>
                 <span className="sm:hidden">New</span>
@@ -276,7 +277,7 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
 
             {/* Mobile Menu Button - visible on screens below md */}
             {user ? (
-              <div ref={mobileMenuRef} className="relative md:hidden">
+              <div ref={mobileMenuRef} className="relative md:hidden flex-shrink-0">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -354,7 +355,7 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
                 size="sm"
                 onClick={() => navigate('/login')}
                 leftIcon={<LogIn className="w-4 h-4" />}
-                className="md:hidden"
+                className="md:hidden flex-shrink-0"
               >
                 <span className="sr-only sm:not-sr-only">Login</span>
               </Button>
