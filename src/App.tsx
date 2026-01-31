@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import HomeView from './components/HomeView';
 import ReaderView from './components/ReaderView';
 import AuthView from './components/AuthView';
@@ -66,11 +67,14 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ToastProvider>
-        <AnimatedRoutes />
-      </ToastProvider>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <ToastProvider>
+          <AnimatedRoutes />
+        </ToastProvider>
+      </BrowserRouter>
+      <Analytics />
+    </>
   );
 }
 
