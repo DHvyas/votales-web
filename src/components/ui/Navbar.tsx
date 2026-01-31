@@ -122,23 +122,23 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="sticky top-4 z-40 px-4 sm:px-6 lg:px-8"
+      className="sticky top-4 z-40 px-2 sm:px-4 md:px-6 lg:px-8"
     >
-      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/15 rounded-2xl shadow-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] px-4 sm:px-6 py-3 transition-all duration-300 hover:border-violet-500/20">
-        <div className="flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto backdrop-blur-xl bg-white/5 border border-white/15 rounded-2xl shadow-xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] px-2 sm:px-4 md:px-6 py-3 transition-all duration-300 hover:border-violet-500/20">
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group flex-shrink-0" title="Vote + Tales">
+          <Link to="/" className="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0" title="Vote + Tales">
             <motion.div
               whileHover={{ rotate: 10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <BookOpen className="w-6 h-6 text-violet-400" />
+              <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-violet-400" />
             </motion.div>
-            <span className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-amber-200" title="Vote + Tales">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-amber-200" title="Vote + Tales">
               VoTales
             </span>
             <span
-              className="text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20"
+              className="hidden sm:inline text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20"
               title="VoTales is currently in public beta. Expect rapid changes."
             >
               BETA v1.0
@@ -210,7 +210,7 @@ export function Navbar({ user, onStartStory }: NavbarProps) {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
             {/* Mobile Search Button */}
             <Button
               variant="ghost"
