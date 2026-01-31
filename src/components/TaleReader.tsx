@@ -100,7 +100,7 @@ export default function TaleReader({ initialTaleId = '' }: TaleReaderProps) {
               Choose Your Path
             </h3>
             <div className="space-y-3">
-              {data.choices.map((choice: { id: string; votes: number; preview: string }) => (
+              {data.choices.map((choice) => (
                 <button
                   key={choice.id}
                   onClick={() => handleChoiceClick(choice.id)}
@@ -109,7 +109,7 @@ export default function TaleReader({ initialTaleId = '' }: TaleReaderProps) {
                   <div className="flex items-center justify-between p-4">
                     <div className="flex-1 text-left">
                       <p className="text-stone-800 font-serif text-base sm:text-lg leading-snug">
-                        {choice.preview}
+                        {choice.previewText}
                       </p>
                       <div className="mt-2 flex items-center gap-2">
                         <span className="text-xs text-stone-500 font-sans">
